@@ -13,8 +13,7 @@ import android.widget.EditText;
 
 import com.baltasarq.listacompra4.R;
 
-public class ItemEditionActivity extends AppCompatActivity {
-
+public class ItemEdicionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +41,8 @@ public class ItemEditionActivity extends AppCompatActivity {
         btCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ItemEditionActivity.this.setResult( Activity.RESULT_CANCELED );
-                ItemEditionActivity.this.finish();
+                ItemEdicionActivity.this.setResult( Activity.RESULT_CANCELED );
+                ItemEdicionActivity.this.finish();
             }
         });
 
@@ -54,13 +53,13 @@ public class ItemEditionActivity extends AppCompatActivity {
                 final int cantidad = Integer.parseInt( edCantidad.getText().toString() );
 
                 if ( pos >= 0 ) {
-                    app.modifyItem( pos, nombre, cantidad );
+                    app.modificaItem( pos, nombre, cantidad );
                 } else {
-                    app.addItem( nombre, cantidad );
+                    app.insertaItem( nombre, cantidad );
                 }
 
-                ItemEditionActivity.this.setResult( Activity.RESULT_OK );
-                ItemEditionActivity.this.finish();
+                ItemEdicionActivity.this.setResult( Activity.RESULT_OK );
+                ItemEdicionActivity.this.finish();
             }
         });
         btGuardar.setEnabled( false );
@@ -100,7 +99,7 @@ public class ItemEditionActivity extends AppCompatActivity {
                 try {
                     cantidad = Integer.parseInt( edCantidad.getText().toString() );
                 } catch(NumberFormatException exc) {
-                    Log.w( "ItemEditionActivity", "edCantidad no puede ser convertido a número" );
+                    Log.w( "ItemEdicionActivity", "edCantidad no puede ser convertido a número" );
                 }
 
                 btGuardar.setEnabled( cantidad > 0 );

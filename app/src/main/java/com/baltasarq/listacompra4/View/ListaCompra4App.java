@@ -32,8 +32,8 @@ public class ListaCompra4App extends Application {
     }
 
     /**
-     * Gets the list of items
-     * @return the list of items, as a List<Item>.
+     * Devuelve la lista de items.
+     * @return la lista de items, como List<Item>.
      */
     public List<Item> getItemList()
     {
@@ -41,6 +41,9 @@ public class ListaCompra4App extends Application {
         return this.items;
     }
 
+    /**
+     * Lee todos los items de la BBDD y los almacena en la lista.
+     */
     private void leerBD()
     {
         SQLiteDatabase db = this.db.getReadableDatabase();
@@ -61,7 +64,12 @@ public class ListaCompra4App extends Application {
         return;
     }
 
-    public void addItem(String nombre, int num)
+    /**
+     * Inserta un nuevo item.
+     * @param nombre El nombre del item.
+     * @param num El num. de elementos.
+     */
+    public void insertaItem(String nombre, int num)
     {
         SQLiteDatabase db = this.getDB();
 
@@ -84,7 +92,13 @@ public class ListaCompra4App extends Application {
         return;
     }
 
-    public void modifyItem(int pos, String nombre, int num)
+    /**
+     * Modifica un item en una pos. dada.
+     * @param pos La pos. del item a modificar.
+     * @param nombre El nombre del item.
+     * @param num El num. de unidades del item.
+     */
+    public void modificaItem(int pos, String nombre, int num)
     {
         // Actualizar lista
         this.leerBD();

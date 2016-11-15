@@ -6,10 +6,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 /**
- * Represents the database access.
+ * Maneja el acceso a la base de datos.
  * Created by baltasarq on 15/11/16.
  */
-
 public class SqlIO extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "ListaCompra";
     private static final int DATABASE_VERSION = 1;
@@ -22,6 +21,9 @@ public class SqlIO extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db)
     {
+        Log.i(  "ListaCompra4.SqlIO",
+                "Creando BBDD " + DATABASE_NAME + " en version " + DATABASE_VERSION );
+
         try {
             db.beginTransaction();
             db.execSQL( "CREATE TABLE IF NOT EXISTS compra( "
@@ -37,7 +39,7 @@ public class SqlIO extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-        Log.i(  "ListaCompra4.SqlIo",
+        Log.i(  "ListaCompra4.SqlIO",
                 "Actualizando BBDD de version " + oldVersion + " a la " + newVersion );
 
         try {

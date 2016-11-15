@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.baltasarq.listacompra4.View.ItemEditionActivity"></activity>
+        <activity android:name="com.baltasarq.listacompra4.View.ItemEdicionActivity"></activity>
     </application>
 
 </manifest>

@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btInserta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent subActividad = new Intent( MainActivity.this, ItemEditionActivity.class );
+                Intent subActividad = new Intent( MainActivity.this, ItemEdicionActivity.class );
 
                 subActividad.putExtra( "pos", -1 );
                 MainActivity.this.startActivityForResult( subActividad, CODIGO_ADICION_ITEM );
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         lvLista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent subActividad = new Intent( MainActivity.this, ItemEditionActivity.class );
+                Intent subActividad = new Intent( MainActivity.this, ItemEdicionActivity.class );
 
                 subActividad.putExtra( "pos", i );
                 MainActivity.this.startActivityForResult( subActividad, CODIGO_EDICION_ITEM );
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
           && resultCode == Activity.RESULT_OK )
         {
             this.adaptadorItems.notifyDataSetChanged();
-            this.updateStatus();
+            this.actualizaNumElementos();
         }
 
         if ( requestCode == CODIGO_EDICION_ITEM
@@ -82,7 +82,8 @@ public class MainActivity extends AppCompatActivity {
         return;
     }
 
-    private void updateStatus()
+    /** Actualiza el num. de elementos existentes en la vista. */
+    private void actualizaNumElementos()
     {
         TextView lblNum = (TextView) this.findViewById( R.id.lblNum );
 
