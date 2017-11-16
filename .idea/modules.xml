@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ListaCompra4.iml" filepath="$PROJECT_DIR$/ListaCompra4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$USER_HOME$/Dropbox/Prys/Android/ListaCompra4/ListaCompra4.iml" filepath="$USER_HOME$/Dropbox/Prys/Android/ListaCompra4/ListaCompra4.iml" />
+      <module fileurl="file://$USER_HOME$/Dropbox/Prys/Android/ListaCompra4/app/app.iml" filepath="$USER_HOME$/Dropbox/Prys/Android/ListaCompra4/app/app.iml" />
     </modules>
   </component>
 </project>

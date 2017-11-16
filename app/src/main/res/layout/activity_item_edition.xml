@@ -5,11 +5,8 @@
     android:id="@+id/activity_item_edition"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.baltasarq.listacompra4.View.ItemEdicionActivity">
+    android:padding="5dp"
+    tools:context="com.devbaltasarq.listacompra4.ItemEdicionActivity">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -18,19 +15,17 @@
         android:layout_weight=".45"
         android:gravity="center_vertical">
 
-        <TextView
+        <TextView android:id="@+id/lblNombre"
             android:text="@string/lblNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/lblNombre"
             android:layout_weight="1" />
 
-        <EditText
+        <EditText android:id="@+id/edNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/edNombre"
             android:layout_weight="1"
             android:hint="@string/pistaNombre"
             android:maxLines="1" />
@@ -44,20 +39,18 @@
         android:layout_weight=".45"
         android:gravity="center_vertical">
 
-        <TextView
+        <TextView android:id="@+id/lblCantidad"
             android:text="@string/lblCantidad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/lblCantidad"
             android:layout_weight="1" />
 
-        <EditText
+        <EditText android:id="@+id/edCantidad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:text="1"
             android:ems="10"
-            android:id="@+id/edCantidad"
             android:layout_weight="1"
             android:gravity="right|center_vertical"
             android:maxLines="1" />
@@ -71,15 +64,15 @@
         android:layout_weight=".1"
         android:gravity="right|center_vertical">
 
-        <Button
-            android:text="@string/btCancelar"
+        <ImageButton
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btCancelar"
             android:layout_weight="1" />
 
-        <Button
-            android:text="@string/btGuardar"
+        <ImageButton
+            android:src="@android:drawable/ic_menu_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btGuardar"
