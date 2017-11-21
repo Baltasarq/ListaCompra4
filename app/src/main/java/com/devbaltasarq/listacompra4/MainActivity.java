@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         this.registerForContextMenu( lvLista );
+        this.gestorDB = new DBManager( this.getApplicationContext() );
     }
 
     @Override
@@ -48,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         // Configurar lista
         final ListView lvLista = this.findViewById( R.id.lvLista );
 
-        this.gestorDB = new DBManager( this.getApplicationContext() );
         this.adaptadorDB = new SimpleCursorAdapter(
                 this,
                 R.layout.lvlista_item,

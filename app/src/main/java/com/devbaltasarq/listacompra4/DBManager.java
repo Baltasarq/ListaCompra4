@@ -26,7 +26,7 @@ public class DBManager extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db)
     {
         Log.i(  "DBManager",
-                "Creando BBDD " + DB_NOMBRE + " en version " + DB_VERSION);
+                "Creando BBDD " + DB_NOMBRE + " v" + DB_VERSION);
 
         try {
             db.beginTransaction();
@@ -64,7 +64,7 @@ public class DBManager extends SQLiteOpenHelper {
         this.onCreate( db );
     }
 
-    /** Devuelve todas las compras en las BD
+    /** Devuelve todas las compras en la BD
      * @return Un Cursor con las compras. */
     public Cursor getCompras()
     {
@@ -99,7 +99,7 @@ public class DBManager extends SQLiteOpenHelper {
                 db.update( TABLA_COMPRA,
                             values, COMPRA_COL_NOMBRE + "= ?", new String[]{ nombre } );
             } else {
-                db.insert(TABLA_COMPRA, null, values);
+                db.insert( TABLA_COMPRA, null, values );
             }
 
             db.setTransactionSuccessful();
